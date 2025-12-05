@@ -7,6 +7,7 @@ body {
   font-size: 17px;
   margin: 0;
   padding: 0;
+  background-color: #f0f0f0;
 }
 
 .grid-container {
@@ -19,6 +20,8 @@ body {
     'footer';
   gap: 10px;
   padding: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .header {
@@ -26,11 +29,12 @@ body {
   background-color: #9933cc;
   text-align: center;
   color: #ffffff;
-  padding: 15px;
+  padding: 20px;
+  border-radius: 5px;
 }
 
 .header > h1 {
-  font-size: 40px;
+  font-size: 32px;
   margin: 0;
 }
 
@@ -45,11 +49,13 @@ body {
 }
 
 .menu li {
-  padding: 8px;
+  padding: 12px;
   margin-bottom: 7px;
   background-color: #33b5e5;
   color: #ffffff;
   cursor: pointer;
+  border-radius: 3px;
+  font-weight: bold;
 }
 
 .menu li:hover {
@@ -59,33 +65,52 @@ body {
 .content {
   grid-area: main;
   background-color: white;
-  padding: 15px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .content > h1 {
-  font-size: 30px;
+  font-size: 28px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.content > h2 {
+  font-size: 20px;
+  margin-top: 20px;
   margin-bottom: 10px;
+  color: #0099cc;
 }
 
 .content > p {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   line-height: 1.6;
+  color: #444;
 }
 
 .facts {
   grid-area: facts;
-  border: 1px solid #0099cc;
-  background-color: #f5f5dc;
-  padding: 15px;
+  border: 2px solid #0099cc;
+  background-color: #fffacd;
+  padding: 20px;
+  border-radius: 5px;
 }
 
 .facts > h2 {
   font-size: 20px;
   margin-top: 0;
+  color: #0099cc;
+}
+
+.facts ul {
+  padding-left: 20px;
 }
 
 .facts li {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  line-height: 1.5;
 }
 
 .footer {
@@ -93,7 +118,8 @@ body {
   background-color: #0099cc;
   color: #ffffff;
   text-align: center;
-  padding: 10px;
+  padding: 15px;
+  border-radius: 5px;
 }
 
 /* Tablet: 600px and up */
