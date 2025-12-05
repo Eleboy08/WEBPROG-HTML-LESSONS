@@ -1,179 +1,68 @@
-<!DOCTYPE html> 
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heinrich M. Tobias | Personal Profile</title>
-    
-    <link href="css/flexbox.css" rel="stylesheet">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            /* A cool dark gradient background */
-            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-            padding: 20px;
-        }
-
-        /* --- MAIN CARD CONTAINER --- */
-        .profile-card {
-            background: rgba(255, 255, 255, 0.05); /* Semi-transparent white */
-            backdrop-filter: blur(10px); /* The "Glass" blur effect */
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 40px;
-            max-width: 800px;
-            width: 100%;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-            display: flex;
-            flex-direction: row;
-            gap: 40px;
-            align-items: center;
-        }
-
-        /* --- LEFT SIDE: IMAGE --- */
-        .image-container {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-        }
-
-        .profile-pic {
-            width: 250px;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 50%; /* Makes the image a circle */
-            border: 4px solid #e94560; /* Accent color border */
-            box-shadow: 0 0 20px rgba(233, 69, 96, 0.4);
-            transition: transform 0.3s ease;
-        }
-
-        .profile-pic:hover {
-            transform: scale(1.05);
-        }
-
-        /* --- RIGHT SIDE: INFO --- */
-        .info-container {
-            flex: 2;
-        }
-
-        .nickname {
-            color: #e94560; /* Accent color */
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.9rem;
-            margin-bottom: 5px;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 5px;
-            line-height: 1.2;
-        }
-
-        .details {
-            color: #ccc;
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-        }
-
-        /* --- SECTIONS --- */
-        .section-title {
-            font-size: 1rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            padding-bottom: 5px;
-            margin-bottom: 10px;
-            margin-top: 20px;
-            color: #a5a5a5;
-        }
-
-        /* HOBBY TAGS (The "Pills" look) */
-        .hobby-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .tag {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            transition: background 0.3s;
-        }
-
-        .tag:hover {
-            background: #e94560;
-            cursor: pointer;
-        }
-
-        .goal-text {
-            font-style: italic;
-            background: rgba(233, 69, 96, 0.2);
-            padding: 10px;
-            border-left: 3px solid #e94560;
-            border-radius: 0 5px 5px 0;
-        }
-
-        @media (max-width: 768px) {
-            .profile-card {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .hobby-list {
-                justify-content: center;
-            }
-
-            .goal-text {
-                text-align: left;
-            }
-        }
-    </style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WEBPROG SF241 Introduction</title>
 </head>
-<body> 
-    
-    <div class="profile-card">
-        <div class="image-container">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnUGk0ePPiEXL7X2Qc3bag62p0wvNwaaqdlQ&s" 
-                 alt="Magandang post naman" 
-                 class="profile-pic">
-        </div>
+<body>
 
-        <div class="info-container">
-            <div class="nickname">Eleboy"</div>
-            <h1>Heinrich M. Tobias</h1>
-            <div class="details">
-                BSCS-SF • 2nd Year Student
-            </div>
+<h1>Personal Profile Web page - Joe Gene Quesada </h1>
+<p>
 
-            <div class="section-title">Everyday Hobbies</div>
-            <div class="hobby-list">
-                <span class="tag">Study</span>
-                <span class="tag">Work</span>
-                <span class="tag">Money</span>
-                <span class="tag">Workout</span>
-                <span class="tag">Eat</span>          
-            </div>
+About Me<br>
+ - Hello Eveyrone!<br>
+ ( Do not include birthdate / age / contact information)<br>
+Education / Achievements<br>
+ BS Computer Science - Ateneo De Manila 1992
+ MS Computer and Information Science - University of Michigan 2000
+Course <br>
+IT Experience<br>
+ SSCI 1992-1993 <br>
+ Decision Systems Corporation 1993-1994 <br>
+ Compuware Corporation 1994 - 2001<br>
+Hobbies & Interests<br>
+ - I play the Classical Guitar<br>
+ - I like cycling
+Goals In Life / Dream<br>
+ - To challenge my students to learn<br>
+ - To start startups with my students<br>
+Picture Gallery<br>
+<img src="https://meanmicio.org/wp-content/uploads/2019/10/332c6-manila3.jpg" alt="At Med-e-Tel 2012" width="500" height="600">
+</p>
 
-            <div class="section-title">Personal Goal</div>
-            <div class="goal-text">
-                "HAve more more money"
-            </div>
-        </div>
-    </div>
+<div class="grid-container">
+
+<div class="header"><h1>Chania</h1></div>
+
+<div class="menu">
+  <ul>
+    <li>The Flight</li>
+    <li>The City</li>
+    <li>The Island</li>
+    <li>The Food</li>
+  </ul>
+</div>
+
+<div class="content">
+  <h1>The City</h1>
+  <p>Chania is the capital of the Chania region on the island of Crete.</p>
+  <p>The city can be divided in two parts, the old town and the modern city. The old town is situated next to the old harbour and is the matrix around which the whole urban area was developed.</p>
+  <p>Chania lies along the north west coast of the island Crete.</p>
+</div>  
+
+<div class="facts">
+  <h2>Facts:</h2>
+  <ul>
+    <li>Chania is a city on the island of Crete</li>
+    <li>Crete is a Greek island in the Mediterranean Sea</li>
+  </ul>
+</div>
+
+<div class="footer"><p>Resize the browser window to see the responsive effect.</p></div>
+  
+</div>
+Responsi
+
 
 </body>
 </html>
