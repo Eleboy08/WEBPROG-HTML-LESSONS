@@ -90,6 +90,17 @@ body {
   color: #444;
 }
 
+/* Image Styling */
+.content img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 10px;
+  margin: 15px 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: block;
+}
+
 .facts {
   grid-area: facts;
   border: 2px solid #0099cc;
@@ -113,6 +124,15 @@ body {
   line-height: 1.5;
 }
 
+/* Image in Facts section */
+.facts img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
 .footer {
   grid-area: footer;
   background-color: #0099cc;
@@ -132,6 +152,14 @@ body {
       'facts facts facts facts facts facts'
       'footer footer footer footer footer footer';
   }
+  
+  .header > h1 {
+    font-size: 40px;
+  }
+  
+  .menu li {
+    padding: 15px;
+  }
 }
 
 /* Desktop: 768px and up */
@@ -142,5 +170,28 @@ body {
       'header header header header header header'
       'menu main main main main facts'
       'footer footer footer footer footer footer';
+  }
+  
+  .content {
+    padding: 25px;
+  }
+  
+  .facts {
+    padding: 25px;
+  }
+}
+
+/* Large Desktop: 1024px and up */
+@media (min-width: 1024px) {
+  .grid-container {
+    max-width: 1400px;
+  }
+  
+  .header > h1 {
+    font-size: 45px;
+  }
+  
+  .content > h1 {
+    font-size: 32px;
   }
 }
