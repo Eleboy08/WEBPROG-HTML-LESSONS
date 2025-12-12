@@ -2,7 +2,7 @@
 :root {
     --bg-color: #f4f6f8;        /* Light grey background */
     --card-bg: #ffffff;         /* White cards */
-    --primary-color: #2c3e50;   /* Dark Blue/Grey for headings */
+    --primary-color: #2c3e50;   /* Dark Blue/Grey for headings/main header */
     --accent-color: #008080;    /* Teal for links/highlights */
     --text-color: #4a5568;      /* Soft dark grey for text */
     --border-radius: 8px;
@@ -40,7 +40,7 @@ body {
 
 /* --- Components --- */
 
-/* Header */
+/* Header & Profile Picture */
 .header {
     grid-area: header;
     background-color: var(--primary-color);
@@ -49,11 +49,46 @@ body {
     padding: 40px 20px;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
+    
+    /* Centering the content and making it a positioning context */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* CRITICAL for positioning the logo */
+}
+
+/* Logo Styles (Upper Left) */
+.header-logo {
+    position: absolute;
+    top: 20px;   /* Distance from the top edge of the header */
+    left: 20px;  /* Distance from the left edge of the header */
+    z-index: 10; 
+}
+
+.logo-image {
+    width: 50px; 
+    height: 50px;
+    border-radius: 5px; 
+}
+
+/* Centered Profile Picture Styles */
+.profile-container {
+    margin-bottom: 15px;
+}
+
+.profile-pic {
+    width: 150px;           
+    height: 150px;          
+    object-fit: cover;      
+    border-radius: 50%;     /* Makes it a circle */
+    border: 4px solid rgba(255, 255, 255, 0.5); /* Semi-transparent white border */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);      
 }
 
 .header h1 {
     margin: 0;
-    font-weight: 300; /* Minimalist font weight */
+    font-weight: 300; 
     letter-spacing: 1px;
 }
 
@@ -79,7 +114,7 @@ body {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Horizontal on mobile */
+    display: flex; 
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
@@ -168,7 +203,7 @@ body {
 /* Sidebar (Facts) */
 .facts {
     grid-area: facts;
-    background-color: var(--primary-color); /* Dark sidebar for contrast */
+    background-color: var(--primary-color); 
     color: white;
     padding: 30px;
     border-radius: var(--border-radius);
@@ -178,7 +213,7 @@ body {
 .facts h2 {
     font-size: 1.1rem;
     margin-top: 0;
-    color: #a0aec0; /* Lighter text for dark bg */
+    color: #a0aec0; 
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -205,7 +240,6 @@ body {
 /* Tablet: 600px and up */
 @media (min-width: 600px) {
     .grid-container {
-        /* Menu on left, Content on right, Facts below */
         grid-template-columns: 200px 1fr;
         grid-template-areas:
             'header header'
@@ -221,12 +255,16 @@ body {
     .menu li {
         margin-bottom: 5px;
     }
+    
+    /* Add extra left padding to the header on tablet to prevent logo overlap with text */
+    .header {
+        padding-left: 80px; 
+    }
 }
 
 /* Desktop: 900px and up */
 @media (min-width: 900px) {
     .grid-container {
-        /* 3 Columns: Menu | Content | Sidebar */
         grid-template-columns: 200px 1fr 280px;
         grid-template-areas:
             'header header header'
@@ -234,7 +272,11 @@ body {
             'footer footer footer';
     }
     
-    /* Make the sidebar height match content visually if short */
+    /* Reset header padding for large screens where logo won't conflict with centered content */
+    .header {
+        padding-left: 20px; /* Reset to standard padding if needed, or keep 80px */
+    }
+
     .facts {
         height: fit-content; 
     }
