@@ -1,62 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEBPROG SF241 Introduction</title>
+    <title>Heinrich M. Tobias - Personal Profile</title>
     
-    <!-- Link to your rwd.css file -->
     <link href="css/rwd.css" rel="stylesheet">
     
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     
     <div class="grid-container">
-        <div class="header">
-            <h1>Heinrich M. Tobias - Personal Profile</h1>
-        </div>
+        <header class="header">
+            <h1>Heinrich M. Tobias</h1>
+            <span class="subtitle">Computer Science Graduate & Educator</span>
+        </header>
         
-        <div class="menu">
+        <nav class="menu">
             <ul>
-                <li>About Me</li>
-                <li>Education</li>
-                <li>Experience</li>
-                <li>Hobbies</li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
             </ul>
-        </div>
+        </nav>
         
-        <div class="content">
-            <h1>About Me</h1>
-            <p>Hello Everyone! I am Heinrich M. Tobias, a Computer Science graduate passionate about technology and education.</p>
+        <main class="content">
+            <section id="about">
+                <h1>About Me</h1>
+                <p class="lead">Hello Everyone! I am Heinrich M. Tobias, a Computer Science graduate passionate about technology and education.</p>
+            </section>
             
-            <h2>Education / Achievements</h2>
-            <p>BS Computer Science - Ateneo De Manila University 1992<br>
-            MS Computer and Information Science - University of Michigan 2000</p>
+            <hr>
+
+            <section id="education">
+                <h2>Education</h2>
+                <div class="item">
+                    <h3>MS Computer and Information Science</h3>
+                    <span class="date">2000</span>
+                    <p>University of Michigan</p>
+                </div>
+                <div class="item">
+                    <h3>BS Computer Science</h3>
+                    <span class="date">1992</span>
+                    <p>Ateneo De Manila University</p>
+                </div>
+            </section>
             
-            <h2>IT Experience</h2>
-            <p>Compuware Corporation 1994 - 2001<br>
-            Software Developer and Team Leader<br>
-            Specialized in enterprise applications and mainframe technologies</p>
+            <section id="experience">
+                <h2>IT Experience</h2>
+                <div class="item">
+                    <h3>Software Developer and Team Leader</h3>
+                    <span class="date">1994 - 2001</span>
+                    <p><strong>Compuware Corporation</strong></p>
+                    <p>Specialized in enterprise applications and mainframe technologies.</p>
+                </div>
+            </section>
             
-            <h2>Hobbies & Interests</h2>
-            <p>• Playing Classical Guitar<br>
-            • Cycling and outdoor activities<br>
-            • Reading technology blogs<br>
-            • Photography</p>
-        </div>  
+            <section id="hobbies">
+                <h2>Hobbies & Interests</h2>
+                <ul class="tag-list">
+                    <li>Classical Guitar</li>
+                    <li>Cycling</li>
+                    <li>Tech Reading</li>
+                    <li>Photography</li>
+                </ul>
+            </section>
+        </main>  
         
-        <div class="facts">
-            <h2>Goals & Dreams:</h2>
+        <aside class="facts">
+            <h2>Goals & Dreams</h2>
             <ul>
                 <li>Challenge students to learn and grow</li>
                 <li>Start innovative tech startups</li>
                 <li>Mentor young developers</li>
                 <li>Contribute to tech education</li>
             </ul>
-        </div>
+        </aside>
         
-        <div class="footer">
-            <p>Resize the browser window to see the responsive effect.</p>
-        </div>
+        <footer class="footer">
+            <p>&copy; 2024 Heinrich M. Tobias. Resize window to test responsiveness.</p>
+        </footer>
     </div>
     
 </body>
