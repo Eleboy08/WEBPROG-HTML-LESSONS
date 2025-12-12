@@ -1,146 +1,241 @@
+/* --- Variables for easy theming --- */
+:root {
+    --bg-color: #f4f6f8;        /* Light grey background */
+    --card-bg: #ffffff;         /* White cards */
+    --primary-color: #2c3e50;   /* Dark Blue/Grey for headings */
+    --accent-color: #008080;    /* Teal for links/highlights */
+    --text-color: #4a5568;      /* Soft dark grey for text */
+    --border-radius: 8px;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "Lucida Sans", sans-serif;
-  font-size: 17px;
-  margin: 0;
-  padding: 0;
-  background-color: #f0f0f0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
+/* --- Layout --- */
 .grid-container {
-  display: grid;
-  grid-template-areas:
-    'header'
-    'menu'
-    'main'
-    'facts'
-    'footer';
-  gap: 10px;
-  padding: 10px;
-  max-width: 1200px;
-  margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+        'header'
+        'menu'
+        'main'
+        'facts'
+        'footer';
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
+/* --- Components --- */
+
+/* Header */
 .header {
-  grid-area: header;
-  background-color: #9933cc;
-  text-align: center;
-  color: #ffffff;
-  padding: 20px;
-  border-radius: 5px;
+    grid-area: header;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
 }
 
-.header > h1 {
-  font-size: 32px;
-  margin: 0;
+.header h1 {
+    margin: 0;
+    font-weight: 300; /* Minimalist font weight */
+    letter-spacing: 1px;
 }
 
+.subtitle {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    display: block;
+}
+
+/* Navigation Menu */
 .menu {
-  grid-area: menu;
+    grid-area: menu;
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 10px;
 }
-  
+
 .menu ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Horizontal on mobile */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
 .menu li {
-  padding: 12px;
-  margin-bottom: 7px;
-  background-color: #33b5e5;
-  color: #ffffff;
-  cursor: pointer;
-  border-radius: 3px;
-  font-weight: bold;
+    width: auto;
 }
 
-.menu li:hover {
-  background-color: #0099cc;
+.menu a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 4px;
+    transition: all 0.2s ease;
 }
-  
+
+.menu a:hover {
+    background-color: var(--bg-color);
+    color: var(--accent-color);
+}
+
+/* Main Content */
 .content {
-  grid-area: main;
-  background-color: white;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    grid-area: main;
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
 }
 
-.content > h1 {
-  font-size: 28px;
-  margin-top: 0;
-  margin-bottom: 15px;
-  color: #333;
+.content h1 {
+    margin-top: 0;
+    color: var(--primary-color);
 }
 
-.content > h2 {
-  font-size: 20px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  color: #0099cc;
+.content h2 {
+    color: var(--accent-color);
+    font-size: 1.25rem;
+    border-bottom: 2px solid var(--bg-color);
+    padding-bottom: 10px;
+    margin-top: 30px;
 }
 
-.content > p {
-  margin-bottom: 15px;
-  line-height: 1.6;
-  color: #444;
+.lead {
+    font-size: 1.1em;
+    font-weight: 400;
 }
 
+/* Specific styling for Resume Items */
+.item {
+    margin-bottom: 20px;
+}
+.item h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+.date {
+    font-size: 0.85rem;
+    color: #888;
+    background: #f0f0f0;
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+/* Hobby Tags */
+.tag-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.tag-list li {
+    background: var(--bg-color);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* Sidebar (Facts) */
 .facts {
-  grid-area: facts;
-  border: 2px solid #0099cc;
-  background-color: #fffacd;
-  padding: 20px;
-  border-radius: 5px;
+    grid-area: facts;
+    background-color: var(--primary-color); /* Dark sidebar for contrast */
+    color: white;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
 }
 
-.facts > h2 {
-  font-size: 20px;
-  margin-top: 0;
-  color: #0099cc;
+.facts h2 {
+    font-size: 1.1rem;
+    margin-top: 0;
+    color: #a0aec0; /* Lighter text for dark bg */
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .facts ul {
-  padding-left: 20px;
+    padding-left: 20px;
 }
 
 .facts li {
-  margin-bottom: 8px;
-  line-height: 1.5;
+    margin-bottom: 12px;
 }
 
+/* Footer */
 .footer {
-  grid-area: footer;
-  background-color: #0099cc;
-  color: #ffffff;
-  text-align: center;
-  padding: 15px;
-  border-radius: 5px;
+    grid-area: footer;
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+    padding: 20px;
 }
+
+/* --- Responsive Breakpoints --- */
 
 /* Tablet: 600px and up */
 @media (min-width: 600px) {
-  .grid-container {
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-areas:
-      'header header header header header header'
-      'menu main main main main main'
-      'facts facts facts facts facts facts'
-      'footer footer footer footer footer footer';
-  }
+    .grid-container {
+        /* Menu on left, Content on right, Facts below */
+        grid-template-columns: 200px 1fr;
+        grid-template-areas:
+            'header header'
+            'menu main'
+            'facts facts'
+            'footer footer';
+    }
+    
+    .menu ul {
+        display: block; /* Vertical menu on tablet+ */
+    }
+    
+    .menu li {
+        margin-bottom: 5px;
+    }
 }
 
-/* Desktop: 768px and up */
-@media (min-width: 768px) {
-  .grid-container {
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-areas:
-      'header header header header header header'
-      'menu main main main main facts'
-      'footer footer footer footer footer footer';
-  }
+/* Desktop: 900px and up */
+@media (min-width: 900px) {
+    .grid-container {
+        /* 3 Columns: Menu | Content | Sidebar */
+        grid-template-columns: 200px 1fr 280px;
+        grid-template-areas:
+            'header header header'
+            'menu main facts'
+            'footer footer footer';
+    }
+    
+    /* Make the sidebar height match content visually if short */
+    .facts {
+        height: fit-content; 
+    }
 }
