@@ -32,13 +32,22 @@
         </nav>
         
         <main class="content">
+            <!-- Demo External JavaScript Section -->
+            <section id="demo-js" style="background-color: #f0f0f0; padding: 20px; margin-bottom: 20px; border-radius: 5px;">
+                <h2>Demo External JavaScript</h2>
+                <p id="demo">Paragraph changed.</p>
+                <button onclick="myFunction()">Try it</button>
+                <p style="margin-top: 10px; font-size: 14px; color: #666;">
+                    This example links to "myScript.js". (myFunction is stored in "myScript.js")
+                </p>
+            </section>
+            
             <section id="about">
                 <h1>About Me</h1>
                 <p class="lead">Hello Everyone! I am Heinrich M. Tobias, a Computer Science graduate passionate about technology and education.</p>
             </section>
             
             <hr>
-
             <section id="education">
                 <h2>Education</h2>
                 <div class="item">
@@ -88,6 +97,9 @@
             <p>&copy; 2024 Heinrich M. Tobias. Resize window to test responsiveness.</p>
         </footer>
     </div>
+    
+    <!-- Link to External JavaScript file -->
+    <script src="js/myScript.js"></script>
     
 </body>
 </html>
